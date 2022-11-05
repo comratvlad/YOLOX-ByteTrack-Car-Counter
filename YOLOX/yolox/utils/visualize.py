@@ -69,7 +69,9 @@ def plot_tracking(image, is_vis, tlwhs, obj_ids, texts, classes, speeds, scores=
     cv2.putText(im, 'frame: %d fps: %.2f in: %d out: %d' % (frame_id, fps, in_count, out_count),
                 (0, int(30 * text_scale)), cv2.FONT_HERSHEY_PLAIN, 4, (0, 255, 0), thickness=2)
 
-    class_dict = {2.0: 'car', 3.0: 'motorcycle', 5.0: 'bus', 6.0: 'train', 7.0: 'truck'}
+    # class_dict = {2.0: 'car', 3.0: 'motorcycle', 5.0: 'bus', 6.0: 'train', 7.0: 'truck'}
+    class_dict = {0: 'car', 1: 'truck', 2: 'bus', 3: 'pickup',
+                  4: 'motorcycle', 5: 'heavy_trailer', 6: 'bicycle', 7: 'person'}
 
     for i, tlwh in enumerate(tlwhs):
         if is_vis[i]:

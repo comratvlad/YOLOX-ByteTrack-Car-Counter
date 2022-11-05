@@ -1,5 +1,5 @@
 import numpy as np
-from lib.yolox.tracker import matching
+from yolox.tracker import matching
 
 from .basetrack import BaseTrack, TrackState
 from .kalman_filter import KalmanFilter
